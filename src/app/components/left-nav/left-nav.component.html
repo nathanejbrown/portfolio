@@ -5,7 +5,7 @@
     </p>
   </div>
   <div class="nav-items">
-    <div *ngFor="let route of routes" class="nav-item">
+    <div *ngFor="let route of routes" class="nav-item" (click)="navigateToRoute(route)">
       {{route.displayName}}
     </div>
   </div>

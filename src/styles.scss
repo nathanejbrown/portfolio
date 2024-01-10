@@ -1,9 +1,17 @@
 /* You can add global styles to this file, and also import other style files */
 
-html {
-  background-color: #020202;
-}
-
 body {
   margin: 0;
+  background-color: #020202;
+  overflow: hidden;
+}
+
+@font-face {
+  font-family: 'OpenSans';
+  src: url('./assets/fonts/opensans/OpenSans-VariableFont_wdth,wght.ttf');
+}
+
+@font-face {
+  font-family: 'Tektur';
+  src: url('./assets/fonts/tektur/Tektur-VariableFont_wdth\,wght.ttf');
 }
