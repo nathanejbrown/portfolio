@@ -1,0 +1,63 @@
+.nav {
+  &-primary {
+    position: fixed;
+    width: 10%;
+    height: 100%;
+    background-color: #222;
+  }
+
+  &-items {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 9.5rem;
+  }
+
+  &-item {
+    height: 4rem;
+    background-color: #020202;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    
+    &:first-child {
+      border-top: 1px solid grey;
+    }
+    
+    border-bottom: 1px solid grey;
+
+    &:hover {
+      cursor: pointer;
+      background-color: #382f3c;
+    }
+  }
+
+  &-header {
+    display: flex;
+    justify-content: center;
+    height: 40px;
+  }
+}
+
+.initial {
+  margin: 1.5rem;
+  font-weight: 900;
+  font-size: 120px;
+  color: #382f3c;
+
+  text-shadow: 1px 1px 1px #726890,
+        1px 2px 1px #726890,
+        1px 3px 1px #726890,
+        1px 4px 1px #726890,
+        1px 5px 1px #726890,
+        1px 6px 1px #726890,
+        1px 7px 1px #726890,
+        1px 8px 1px #726890,
+        1px 9px 1px #726890,
+        1px 10px 1px #726890,
+    1px 18px 6px rgba(16,16,16,0.4),
+    1px 22px 10px rgba(16,16,16,0.2),
+    1px 25px 35px rgba(16,16,16,0.2),
+    1px 30px 60px rgba(16,16,16,0.4);
+}
