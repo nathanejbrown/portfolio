@@ -1,3 +1,5 @@
+@import '../assets/styles/colors.scss';
+
 .container {
   display: flex;
 }
@@ -6,6 +8,6 @@
   margin-top: 8.5rem;
   margin-left: 12rem;
   padding: 1rem;
-  background-color: #020202;
+  background-color: $profile-black;
   height: 100vh;
 }

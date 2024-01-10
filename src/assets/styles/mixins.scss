@@ -1,0 +1,13 @@
+@mixin h1-white {
+  color: white;
+  line-height: 80px;
+  font-size: 75px;
+  font-family: 'Tektur';
+  margin-top: 2rem;
+}
+
+@mixin h2-white {
+  color: white;
+  font-size: 45px;
+  font-family: 'Tektur';
+}

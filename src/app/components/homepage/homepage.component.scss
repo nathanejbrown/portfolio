@@ -1,25 +1,16 @@
+@import '../../../assets/styles/mixins.scss';
+@import '../../../assets/styles/colors.scss';
+
 h1 {
-  color: white;
-  line-height: 80px;
-  font-size: 75px;
-  font-family: 'Tektur';
-  margin-top: 2rem;
+  @include h1-white;
 }
 
 h2 {
-  color: white;
-  font-size: 45px;
-  font-family: 'Tektur';
+  @include h2-white;
   margin-top: 1.5rem;
 }
 
 h3 {
-  color: #726890;
+  color: $profile-light-purple;
   font-family: 'Tektur';
-}
-
-.no-margin {
-  &-bottom {
-    margin-bottom: 0;
-  }
 }

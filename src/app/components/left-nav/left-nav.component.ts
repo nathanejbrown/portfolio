@@ -37,7 +37,6 @@ export class LeftNavComponent {
     if (route.external) {
       window.open(route.url, '_blank')
     } else {
-      console.log('here?')
       this.router.navigate([route.url])
     }
   }

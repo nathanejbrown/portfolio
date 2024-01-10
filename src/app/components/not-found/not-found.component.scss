@@ -1,4 +1,5 @@
+@import '../../../assets/styles/mixins.scss';
+
 h1 {
-  color: white;
-  font-size: 80px;
+  @include h1-white;
 }
