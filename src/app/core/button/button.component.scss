@@ -1,0 +1,13 @@
+@import '../../../assets/styles/colors.scss';
+
+button {
+  margin-top: 1rem;
+  height: 2.5rem;
+  width: 7rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  background-color: $profile-light-purple;
+  border: none;
+  color: white;
+  font-family: 'Tektur';
+}

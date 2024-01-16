@@ -1,0 +1,18 @@
+@import '../../../assets/styles/colors.scss';
+
+.container {
+  margin-top: 1rem;
+
+  textarea {
+    width: 30.5rem;
+    height: 15rem;
+    resize: none;
+    border-radius: 0.5rem;
+    padding: 1rem;
+
+    &::placeholder {
+      font-family: 'Tektur';
+      color: $profile-black;
+    }
+  }
+}

@@ -1,0 +1,31 @@
+@import '../../../assets/styles/colors.scss';
+
+// Remove chrome-added dark background when input is populated
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active{
+    -webkit-box-shadow: 0 0 0 30px #FFF inset !important;
+    box-shadow: 0 0 0 30px #FFF inset !important;
+}
+
+.input-container {
+  margin-top: 1rem;
+  input {
+    height: 2.5rem;
+    border: 3px solid transparent;
+    width: 20.5rem;
+    border-radius: 0.5rem;
+    padding-left: 1rem;
+
+    &:focus {
+      outline: none;
+      border: 3px solid $profile-light-purple;
+    }
+
+    &::placeholder {
+      font-family: 'Tektur';
+      color: $profile-black;
+    }
+  }
+}
