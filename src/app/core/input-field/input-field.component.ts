@@ -6,7 +6,7 @@ import { ControlValueAccessor, NgControl } from '@angular/forms';
   standalone: true,
   imports: [],
   templateUrl: './input-field.component.html',
-  styleUrl: './input-field.component.scss'
+  styleUrls: ['./input-field.component.scss']
 })
 export class InputFieldComponent implements ControlValueAccessor {
   @Input() placeholder: string = '';

@@ -9,7 +9,7 @@ import { LeftNavComponent } from './components/left-nav/left-nav.component';
   standalone: true,
   imports: [CommonModule, RouterOutlet, LeftNavComponent],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+  styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
   scene = new THREE.Scene();

@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
   standalone: true,
   imports: [CommonModule],
   templateUrl: './left-nav.component.html',
-  styleUrl: './left-nav.component.scss'
+  styleUrls: ['./left-nav.component.scss']
 })
 export class LeftNavComponent {
   routes: Route[] = [

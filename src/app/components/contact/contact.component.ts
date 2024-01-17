@@ -9,7 +9,7 @@ import { ButtonComponent } from '../../core/button/button.component';
   standalone: true,
   imports: [ReactiveFormsModule, InputFieldComponent, LargeTextComponent, ButtonComponent],
   templateUrl: './contact.component.html',
-  styleUrl: './contact.component.scss'
+  styleUrls: ['./contact.component.scss']
 })
 export class ContactComponent {
   contactForm: FormGroup;
