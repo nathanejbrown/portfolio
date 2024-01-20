@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
 import { Route } from '../../models/routes.model';
-import { CommonModule } from '@angular/common';
-import { Router } from '@angular/router';
+import { NgFor } from '@angular/common';
+import { Router, RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-left-nav',
   standalone: true,
-  imports: [CommonModule],
+  imports: [NgFor, RouterLink],
   templateUrl: './left-nav.component.html',
   styleUrls: ['./left-nav.component.scss']
 })
@@ -14,7 +14,7 @@ export class LeftNavComponent {
   routes: Route[] = [
     {
       displayName: 'About me',
-      url: '/'
+      url: '/about'
     },
     {
       displayName: 'Resume',

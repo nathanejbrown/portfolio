@@ -1,0 +1,17 @@
+@import '../../../assets/styles/mixins.scss';
+
+.container {
+  max-width: 50rem;
+}
+
+h1 {
+  @include h1-white;
+}
+
+h3 {
+  @include h3-white;
+}
+
+p {
+  @include body-text;
+}
