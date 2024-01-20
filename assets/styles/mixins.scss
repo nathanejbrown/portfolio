@@ -11,3 +11,14 @@
   font-size: 45px;
   font-family: 'Tektur';
 }
+
+@mixin h3-white {
+  color: white;
+  font-size: 35px;
+  font-family: 'Tektur';
+}
+
+@mixin body-text {
+  color: white;
+  font-family: 'Tektur';
+}
