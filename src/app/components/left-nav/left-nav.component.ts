@@ -18,7 +18,8 @@ export class LeftNavComponent {
     },
     {
       displayName: 'Resume',
-      url: '/asdf'
+      url: 'src/assets/files/resume.pdf',
+      external: true
     },
     {
       displayName: 'GitHub',
