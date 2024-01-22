@@ -4,6 +4,6 @@
   <app-input-field type="text" placeholder="Name" formControlName="name"></app-input-field>
   <app-input-field type="text" placeholder="Email" formControlName="email"></app-input-field>
   <app-input-field type="text" placeholder="Subject" formControlName="subject"></app-input-field>
-  <app-large-text placeholder="Message"></app-large-text>
-  <app-button label="Submit"></app-button>
+  <app-large-text placeholder="Message" formControlName="message"></app-large-text>
+  <app-button label="Submit" (click)="sendEmail()"></app-button>
 </form>
