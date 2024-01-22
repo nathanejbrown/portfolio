@@ -29,7 +29,7 @@ export class ContactComponent {
     })
 
     this.contactForm.valueChanges.subscribe(changes => {
-      console.log('changes', changes)
+      console.log('there have been changes', changes)
     })
   }
 }
