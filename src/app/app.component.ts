@@ -3,6 +3,8 @@ import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import * as THREE from 'three';
 import { LeftNavComponent } from './components/left-nav/left-nav.component';
+import { Observable, map } from 'rxjs';
+import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 
 @Component({
   selector: 'app-root',
@@ -19,6 +21,13 @@ export class AppComponent implements OnInit {
   geometry = new THREE.BoxGeometry( 1, 1, 1 );
   material = new THREE.MeshBasicMaterial( { color: 0x00ff00 } );
   cube = new THREE.Mesh( this.geometry, this.material );
+
+  isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
+    .pipe(
+      map(res => res.matches)
+    )
+
+  constructor(private breakpointObserver: BreakpointObserver) {}
 
   ngOnInit(): void {
     // this.renderer.setSize( window.innerWidth, window.innerHeight );

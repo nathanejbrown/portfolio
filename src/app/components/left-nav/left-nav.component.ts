@@ -1,16 +1,27 @@
 import { Component } from '@angular/core';
 import { Route } from '../../models/routes.model';
-import { NgFor } from '@angular/common';
+import { CommonModule, NgFor } from '@angular/common';
 import { Router, RouterLink } from '@angular/router';
+import { Observable, map } from 'rxjs';
+import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatIconModule } from '@angular/material/icon';
 
 @Component({
   selector: 'app-left-nav',
   standalone: true,
-  imports: [NgFor, RouterLink],
+  imports: [NgFor, RouterLink, CommonModule, MatSidenavModule, MatIconModule],
   templateUrl: './left-nav.component.html',
   styleUrls: ['./left-nav.component.scss']
 })
 export class LeftNavComponent {
+  isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
+    .pipe(
+      map(res => res.matches)
+    )
+
+  opened: boolean = false;
+
   routes: Route[] = [
     {
       displayName: 'About me',
@@ -32,7 +43,7 @@ export class LeftNavComponent {
     }
   ]
 
-  constructor(private router: Router) {}
+  constructor(private router: Router, private breakpointObserver: BreakpointObserver) {}
 
   navigateToRoute(route: Route): void {
     if (route.external) {
@@ -40,5 +51,6 @@ export class LeftNavComponent {
     } else {
       this.router.navigate([route.url])
     }
+    this.opened = false;
   }
 }

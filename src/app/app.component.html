@@ -1,6 +1,6 @@
 <div class="container">
   <app-left-nav></app-left-nav>
-  <div class="content">
+  <div [ngClass]="(isHandset$ | async) ? 'content-mobile' : 'content'">
     <router-outlet></router-outlet>
   </div>
 </div>

@@ -3,7 +3,7 @@
 .container {
   margin-top: 1rem;
 
-  textarea {
+  .content {
     width: 30.5rem;
     height: 15rem;
     resize: none;
@@ -14,5 +14,10 @@
       font-family: 'Tektur';
       color: $profile-black;
     }
+  }
+
+  .content-mobile {
+    width: 21rem;
+    height: 12rem;
   }
 }

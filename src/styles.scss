@@ -3,7 +3,6 @@
 body {
   margin: 0;
   background-color: $profile-black;
-  // overflow: hidden;
 }
 
 @font-face {
@@ -20,4 +19,8 @@ body {
   &-bottom {
     margin-bottom: 0;
   }
+}
+
+.hidden {
+  display: none;
 }

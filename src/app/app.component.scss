@@ -8,6 +8,13 @@
   margin-top: 8.5rem;
   margin-left: 10%;
   padding: 1rem;
-  background-color: $profile-black;
   height: 100vh;
+
+  &-mobile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    max-width: 85%;
+  }
 }

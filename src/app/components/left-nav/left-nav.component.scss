@@ -11,7 +11,6 @@
   &-items {
     display: flex;
     flex-direction: column;
-    width: 100%;
     margin-top: 9.5rem;
   }
 
@@ -40,6 +39,24 @@
     justify-content: center;
     height: 40px;
   }
+
+  &-mobile {
+    height: 100%;
+    background-color: $profile-dark-grey;
+    position: fixed;
+    .nav-items-mobile {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      .nav-item-mobile {
+        min-width: 8rem;
+        color: white;
+        margin: 0.5rem;
+      }
+    }
+  }
 }
 
 .initial {
@@ -63,4 +80,22 @@
     1px 22px 10px rgba(16,16,16,0.2),
     1px 25px 35px rgba(16,16,16,0.2),
     1px 30px 60px rgba(16,16,16,0.4);
+}
+
+mat-icon {
+  color: white;
+  width: auto;
+  margin: 0.5rem;
+}
+
+::ng-deep {
+  mat-sidenav.mat-drawer-side {
+    border: none;
+  }
+}
+
+.menu-closed {
+  max-height: 5%;
+  width: 100%;
+  background-color: $profile-black;
 }
