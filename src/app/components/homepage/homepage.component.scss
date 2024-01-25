@@ -7,10 +7,34 @@ h1 {
 
 h2 {
   @include h2-white;
-  margin-top: 1.5rem;
 }
 
 h3 {
   color: $profile-light-purple;
   font-family: 'Tektur';
+}
+
+.container {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  height: 80vh;
+  justify-content: space-between;
+}
+
+.container-mobile {
+  .socials {
+    margin-bottom: 3rem;
+  }
+}
+
+.icon {
+  color: $profile-white;
+  cursor: pointer;
+}
+
+.socials {
+  display: flex;
+  justify-content: space-between;
+  max-width: 4.5rem;
 }

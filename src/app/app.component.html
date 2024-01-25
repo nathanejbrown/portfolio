@@ -1,6 +1,10 @@
-<div class="container">
-  <app-left-nav></app-left-nav>
-  <div [ngClass]="(isHandset$ | async) ? 'content-mobile' : 'content'">
-    <router-outlet></router-outlet>
+<div [ngClass]="(isHandset$ | async) ? 'container-mobile' : 'container'">
+  <div class="content">
+    <app-homepage></app-homepage>
+  </div>
+
+  <div class="content">
+    <app-about></app-about>
+    <app-contact></app-contact>
   </div>
 </div>

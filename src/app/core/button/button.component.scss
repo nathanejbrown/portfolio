@@ -6,8 +6,12 @@ button {
   width: 7rem;
   border-radius: 0.5rem;
   cursor: pointer;
-  background-color: $profile-light-purple;
+  background-color: $profile-green;
   border: none;
-  color: white;
+  color: $profile-white;
   font-family: 'Tektur';
+
+  &:hover {
+    background-color: #7E8C79;
+  }
 }
