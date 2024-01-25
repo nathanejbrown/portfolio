@@ -1,17 +1,69 @@
 @import '../../../assets/styles/mixins.scss';
 
-.container {
-  max-width: 50rem;
-}
-
-h1 {
-  @include h1-white;
-}
-
-h3 {
-  @include h3-white;
+h5 {
+  @include h5-white;
+  padding: 0.5rem;
 }
 
 p {
   @include body-text;
+}
+
+.experience {
+  margin-top: 3rem;
+}
+
+.job {
+  padding: 0.5rem;
+  &:hover {
+    border-radius: 8px;
+    background-color: #5D666E;
+  }
+}
+
+.job-title {
+  @include h3-white;
+}
+
+.job-company {
+  @include h4-white;
+}
+
+.job-time-period {
+  @include small-blue-text;
+  display: inline-block;
+}
+
+p {
+  margin: 0;
+}
+
+ul {
+  padding: 0;
+}
+
+li {
+  @include body-text;
+  color: $profile-white;
+  list-style: none;
+}
+
+.techs {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.pill {
+  background-color: $profile-green;
+  border-radius: 40px;
+  padding: 0.5rem;
+  width: auto;
+  font-family: 'Tektur';
+  color: $profile-white;
+  margin-bottom: 1rem;
+}
+
+.about {
+  padding: 0.5rem;
 }

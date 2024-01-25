@@ -10,14 +10,6 @@ export const routes: Routes = [
     component: HomepageComponent
   },
   {
-    path: 'contact',
-    component: ContactComponent
-  },
-  {
-    path: 'about',
-    component: AboutComponent
-  },
-  {
     path: '**',
     component: NotFoundComponent
   }

@@ -1,24 +1,49 @@
+@import './colors.scss';
+
 @mixin h1-white {
-  color: white;
+  color: $profile-white;
   line-height: 80px;
-  font-size: 75px;
+  font-size: 55px;
   font-family: 'Tektur';
-  margin-top: 2rem;
 }
 
 @mixin h2-white {
-  color: white;
-  font-size: 45px;
+  color: $profile-white;
+  font-size: 35px;
   font-family: 'Tektur';
 }
 
 @mixin h3-white {
-  color: white;
-  font-size: 35px;
+  color: $profile-white;
+  font-size: 25px;
+  font-family: 'Tektur';
+}
+
+@mixin h4-white {
+  color: $profile-white;
+  font-size: 20px;
+  font-family: 'Tektur';
+}
+
+@mixin h5-white {
+  color: $profile-white;
+  font-size: 15px;
+  font-family: 'Tektur';
+}
+
+@mixin h6-white {
+  color: $profile-white;
+  font-size: 10px;
   font-family: 'Tektur';
 }
 
 @mixin body-text {
   color: white;
   font-family: 'Tektur';
+}
+
+@mixin small-blue-text {
+  color: $profile-blue;
+  font-size: 12px;
+  margin: none;
 }
