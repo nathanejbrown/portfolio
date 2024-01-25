@@ -5,5 +5,5 @@
   <app-input-field type="text" placeholder="Email" formControlName="email"></app-input-field>
   <app-input-field type="text" placeholder="Subject" formControlName="subject"></app-input-field>
   <app-large-text placeholder="Message" formControlName="message"></app-large-text>
-  <app-button label="Submit" (click)="sendEmail()"></app-button>
+  <app-button [ngClass]="{'button-mobile': (isHandset$ | async)}" label="Submit" (click)="sendEmail()"></app-button>
 </form>

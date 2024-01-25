@@ -4,11 +4,14 @@ import { InputFieldComponent } from '../../core/input-field/input-field.componen
 import { LargeTextComponent } from '../../core/large-text/large-text.component';
 import { ButtonComponent } from '../../core/button/button.component';
 import { SendEmailHttpService } from 'app/services/send-email.http.service';
+import { Observable, map } from 'rxjs';
+import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-contact',
   standalone: true,
-  imports: [ReactiveFormsModule, InputFieldComponent, LargeTextComponent, ButtonComponent],
+  imports: [ReactiveFormsModule, InputFieldComponent, LargeTextComponent, ButtonComponent, CommonModule],
   templateUrl: './contact.component.html',
   styleUrls: ['./contact.component.scss'],
   providers: [SendEmailHttpService]
@@ -16,8 +19,14 @@ import { SendEmailHttpService } from 'app/services/send-email.http.service';
 export class ContactComponent {
   contactForm: FormGroup;
   errorMessage: string = '';
+  loading: boolean = false;
 
-  constructor(private sendEmailHttpService: SendEmailHttpService) {
+  isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
+  .pipe(
+    map(res => res.matches)
+  )
+
+  constructor(private sendEmailHttpService: SendEmailHttpService, private breakpointObserver: BreakpointObserver) {
     this.contactForm = new FormGroup({
       name: new FormControl('', {
         validators: [Validators.required]
@@ -33,7 +42,6 @@ export class ContactComponent {
   }
 
   sendEmail(): void {
-    console.log('called?', this.contactForm)
     if (this.contactForm.valid) {
       this.errorMessage = '';
       let newEmail = {
