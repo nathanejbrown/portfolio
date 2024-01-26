@@ -29,6 +29,11 @@ export class AppComponent implements OnInit {
       map(res => res.matches)
     )
 
+  isTablet$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Tablet)
+      .pipe(
+        map(res => res.matches)
+      )
+
   constructor(private breakpointObserver: BreakpointObserver) {}
 
   ngOnInit(): void {

@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Email } from '../models/email.model';
+import { Email } from '../../models/email.model';
 import { environment } from '@environments/environment';
 import { HttpClient } from '@angular/common/http';
 import { map } from 'rxjs';

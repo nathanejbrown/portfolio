@@ -24,4 +24,9 @@ export class HomepageComponent {
   .pipe(
     map(res => res.matches)
   )
+
+  isTablet$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Tablet)
+      .pipe(
+        map(res => res.matches)
+      )
 }

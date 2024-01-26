@@ -3,7 +3,7 @@ import { FormControl, FormGroup, FormsModule, ReactiveFormsModule, Validators } 
 import { InputFieldComponent } from '../../core/input-field/input-field.component';
 import { LargeTextComponent } from '../../core/large-text/large-text.component';
 import { ButtonComponent } from '../../core/button/button.component';
-import { SendEmailHttpService } from 'app/services/send-email.http.service';
+import { SendEmailHttpService } from 'app/services/send-email/send-email.http.service';
 import { Observable, map } from 'rxjs';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { CommonModule } from '@angular/common';
@@ -20,6 +20,7 @@ export class ContactComponent {
   contactForm: FormGroup;
   errorMessage: string = '';
   loading: boolean = false;
+
 
   isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
   .pipe(
