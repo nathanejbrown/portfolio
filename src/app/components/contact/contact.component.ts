@@ -4,9 +4,8 @@ import { InputFieldComponent } from '../../core/input-field/input-field.componen
 import { LargeTextComponent } from '../../core/large-text/large-text.component';
 import { ButtonComponent } from '../../core/button/button.component';
 import { SendEmailHttpService } from 'app/services/send-email/send-email.http.service';
-import { Observable, map } from 'rxjs';
-import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { CommonModule } from '@angular/common';
+import { BreakpointsService } from 'app/services/breakpoints/breakpoints.service';
 
 @Component({
   selector: 'app-contact',
@@ -21,13 +20,7 @@ export class ContactComponent {
   errorMessage: string = '';
   loading: boolean = false;
 
-
-  isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
-  .pipe(
-    map(res => res.matches)
-  )
-
-  constructor(private sendEmailHttpService: SendEmailHttpService, private breakpointObserver: BreakpointObserver) {
+  constructor(private sendEmailHttpService: SendEmailHttpService, public breakpointsService: BreakpointsService) {
     this.contactForm = new FormGroup({
       name: new FormControl('', {
         validators: [Validators.required]

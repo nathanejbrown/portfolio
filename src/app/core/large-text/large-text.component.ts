@@ -3,6 +3,7 @@ import { Component, Input, Self, Optional } from '@angular/core';
 import { NgControl } from '@angular/forms';
 import { Observable, map } from 'rxjs';
 import { CommonModule } from '@angular/common';
+import { BreakpointsService } from 'app/services/breakpoints/breakpoints.service';
 
 @Component({
   selector: 'app-large-text',
@@ -14,17 +15,12 @@ import { CommonModule } from '@angular/common';
 export class LargeTextComponent {
   @Input() placeholder: string = '';
 
-  isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
-    .pipe(
-      map(res => res.matches)
-    )
-
   value: string = '';
 
   onChange: any = () => { };
   onTouched: any = () => { };
 
-  constructor(@Self() @Optional() public control: NgControl, private breakpointObserver: BreakpointObserver) {
+  constructor(@Self() @Optional() public control: NgControl, public breakpointsService: BreakpointsService) {
     this.control.valueAccessor = this;
   }
 

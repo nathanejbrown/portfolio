@@ -1,4 +1,4 @@
-<div [ngClass]="((isHandset$ | async) || (isTablet$ | async)) ? 'container-mobile' : 'container'">
+<div [ngClass]="(breakpointsService.isHandheld$| async) ? 'container-mobile' : 'container'">
   <section>
     <h1 class="no-margin-bottom no-margin-top">Nathan Brown</h1>
     <h2 class="no-margin-bottom">Full Stack Software Engineer</h2>
