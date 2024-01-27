@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Observable, map, merge } from 'rxjs';
+import { Observable, map, combineLatest } from 'rxjs';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 
 @Injectable({
@@ -16,7 +16,10 @@ export class BreakpointsService {
         map(res => res.matches)
       )
 
-  isHandheld$: Observable<boolean> = merge(this.isHandset$, this.isTablet$)
+  isHandheld$: Observable<boolean> = combineLatest([this.isHandset$, this.isTablet$])
+    .pipe(
+      map(([a, b]) => a || b)
+    )
 
   constructor(private breakpointObserver: BreakpointObserver) { }
 }
