@@ -9,7 +9,7 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "lint": "ng lint",
-    "deploy": "ng deploy --base-href=."
+    "deploy": "ng deploy --cname=www.nathanbrown.tech"
   },
   "private": true,
   "dependencies": {
