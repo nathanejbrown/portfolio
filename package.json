@@ -1,7 +1,7 @@
 {
   "name": "portfolio",
   "version": "0.0.0",
-  "homepage": "https://nathanejbrown.github.io/portfolio/",
+  "homepage": "https://www.nathanbrown.tech",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
