@@ -10,7 +10,7 @@ import { BreakpointsService } from 'app/services/breakpoints/breakpoints.service
 @Component({
   selector: 'app-contact',
   standalone: true,
-  imports: [ReactiveFormsModule, InputFieldComponent, LargeTextComponent, ButtonComponent, CommonModule],
+  imports: [ReactiveFormsModule, InputFieldComponent, LargeTextComponent, ButtonComponent, CommonModule, FormsModule],
   templateUrl: './contact.component.html',
   styleUrls: ['./contact.component.scss'],
   providers: [SendEmailHttpService]
@@ -19,6 +19,7 @@ export class ContactComponent {
   contactForm: FormGroup;
   errorMessage: string = '';
   loading: boolean = false;
+  buttonText: string = 'Submit';
 
   constructor(private sendEmailHttpService: SendEmailHttpService, public breakpointsService: BreakpointsService) {
     this.contactForm = new FormGroup({
@@ -37,6 +38,7 @@ export class ContactComponent {
 
   sendEmail(): void {
     if (this.contactForm.valid) {
+      this.loading = true;
       this.errorMessage = '';
       let newEmail = {
         name: this.contactForm.controls['name'].value,
@@ -46,7 +48,12 @@ export class ContactComponent {
       }
   
       this.sendEmailHttpService.sendEmail(newEmail).subscribe(res => {
-        console.log('res', res)
+        this.contactForm.reset();
+        this.loading = false;
+        this.buttonText = 'Sent!';
+        setTimeout(() => {
+          this.buttonText = 'Submit';
+        }, 3000);
       })
     } else {
       this.errorMessage = 'Name, email, and message fields are required.';

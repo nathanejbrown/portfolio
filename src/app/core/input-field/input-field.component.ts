@@ -1,10 +1,10 @@
 import { Component, Self, Optional, Input } from '@angular/core';
-import { ControlValueAccessor, NgControl } from '@angular/forms';
+import { ControlValueAccessor, NgControl, FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-input-field',
   standalone: true,
-  imports: [],
+  imports: [FormsModule],
   templateUrl: './input-field.component.html',
   styleUrls: ['./input-field.component.scss']
 })
@@ -13,7 +13,7 @@ export class InputFieldComponent implements ControlValueAccessor {
 
   value: string = '';
 
-  onChange: any = () => { };
+  onChange: any = () => {};
   onTouched: any = () => { };
 
   constructor(@Self() @Optional() public control: NgControl) {

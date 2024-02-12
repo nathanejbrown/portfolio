@@ -1,14 +1,12 @@
-import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Component, Input, Self, Optional } from '@angular/core';
-import { NgControl } from '@angular/forms';
-import { Observable, map } from 'rxjs';
+import { NgControl, FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { BreakpointsService } from 'app/services/breakpoints/breakpoints.service';
 
 @Component({
   selector: 'app-large-text',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, FormsModule],
   templateUrl: './large-text.component.html',
   styleUrls: ['./large-text.component.scss']
 })

@@ -1,1 +1,4 @@
-<button>{{ label }}</button>
+<button>
+  <mat-spinner *ngIf="loading" color="warn"></mat-spinner>
+  {{ loading ? '' : label }}
+</button>
