@@ -46,6 +46,7 @@ li {
   @include body-text;
   color: $profile-white;
   list-style: none;
+  margin-bottom: 1rem;
 }
 
 .techs {
